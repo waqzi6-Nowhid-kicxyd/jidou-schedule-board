@@ -4,8 +4,8 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <meta name="theme-color" content="#dff4ff">
-<title>活動きりかえボード V9.3.2</title>
-<link rel="stylesheet" href="styles-v9.3.2.css?v=9.3.2">
+<title>活動きりかえボード V9.4.0</title>
+<link rel="stylesheet" href="styles-v9.4.0.css?v=9.4.0">
 </head>
 <body>
 <div class="app">
@@ -43,7 +43,7 @@
         <div id="nextName" class="next-name"></div>
         <span class="edit-hint">設定</span>
       </button>
-      <div class="visual-timer">
+      <div id="mainTimerButton" class="visual-timer timer-button" role="button" tabindex="0" aria-label="つぎの活動の開始時間を設定">
         <svg viewBox="0 0 120 120" aria-hidden="true">
           <circle class="track" cx="60" cy="60" r="50"/>
           <circle id="mainProgress" class="progress" cx="60" cy="60" r="50"/>
@@ -104,8 +104,15 @@
 <form id="nextForm" method="dialog">
   <div class="dialog-head"><h2>つぎの活動</h2><button id="closeNextDialog" type="button">×</button></div>
   <label>活動を選ぶ<select id="quickNextSelect"></select></label>
+  <button class="save" type="submit">活動を設定する</button>
+</form>
+</dialog>
+
+<dialog id="timerDialog">
+<form id="timerForm" method="dialog">
+  <div class="dialog-head"><h2>つぎの開始時間</h2><button id="closeTimerDialog" type="button">×</button></div>
   <label>開始時間（未選択でも可）<input id="quickNextStart" type="time"></label>
-  <button class="save" type="submit">設定する</button>
+  <button class="save" type="submit">時間を設定する</button>
 </form>
 </dialog>
 
@@ -122,6 +129,6 @@
   <button class="save" type="submit">保存する</button>
 </form>
 </dialog>
-<script src="app-v9.3.2.js?v=9.3.2"></script>
+<script src="app-v9.4.0.js?v=9.4.0"></script>
 </body>
 </html>
